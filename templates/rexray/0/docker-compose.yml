@@ -1,0 +1,19 @@
+rexray:
+    image: lkoenigsberger/scaleio-sdc
+    stdin_open: true
+    tty: true
+    privileged: true
+    net: host
+    environment:
+        SYSTEM_ID:      ${SCALEIO_SYSTEM_ID}
+        MDM_IP:         ${SCALEIO_MDM_IP}
+        MDM_USER:       ${SCALEIO_MDM_USER}
+        MDM_PASSWORD:   ${SCALIO_MDM_PASSWORD}
+        PROTECTION_DOMAIN_NAME: ${SCALEIO_PROTECTION_DOMAIN_NAME}
+        STORAGE_POOL_NAME: ${SCALEIO_STORAGE_POOL_NAME}
+    volumes:
+        - /proc:/host/proc
+    labels:
+        io.rancher.container.pull_image: always
+        io.rancher.container.dns: true
+        io.rancher.scheduler.affinity:host_label: rexray.scaleio=true

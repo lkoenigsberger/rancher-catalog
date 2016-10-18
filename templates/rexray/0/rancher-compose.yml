@@ -1,0 +1,35 @@
+.catalog:
+  name: "REX-Ray"
+  version: "latest"
+  description: "REX-Ray persistent storage"
+  questions:
+    - variable: "SCALEIO_SYSTEM_ID"
+      label: "ScaleIO System ID"
+      description: "ScaleIO System ID"
+      type: "string"
+      required: true
+    - variable: "SCALEIO_MDM_IP"
+      label: "ScaleIO Primary MDM IP address"
+      description: "The managed network IP addr of the primary mdm that is running ScaleIO"
+      type: "string"
+      required: true
+    - variable: "SCALEIO_MDM_USER"
+      label: "ScaleIO MDM User"
+      description: "Username for MDM"
+      type: "string"
+      required: true
+    - variable: "SCALEIO_MDM_PASSWORD"
+      label: "ScaleIO MDM Password"
+      description: "Password for the MDM user"
+      type: "string"
+      required: true
+    - variable: "SCALEIO_PROTECTION_DOMAIN_NAME"
+      label: "ScaleIO ProtectionDomainName"
+      description: "your ProtectionDomainName"
+      type: "string"
+      required: true
+    - variable: "SCALEIO_STORAGE_POOL_NAME"
+      label: "ScaleIO StoragePool"
+      description: "your StoragePool"
+      type: "string"
+      required: true
